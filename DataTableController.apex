@@ -11,7 +11,7 @@ public class DataTableController {
         if(Schema.getGlobalDescribe().containsKey(ObjectName) ) {
             sObject sObj = Schema.getGlobalDescribe().get(ObjectName).newSObject() ;
             
-            //get all the labels for Opportunity fields and put them in a map, keyed to the field api name
+            //get all the labels for sObject fields and put them in a map, keyed to the field api name
             Map<String, Schema.SObjectField> fieldMap = Schema.getGlobalDescribe().get(ObjectName).getDescribe().fields.getMap();
             Map<Schema.SObjectField,String> fieldToAPIName = new Map<Schema.SObjectField,String>();
             Map<String, String> apiNameToLabel = new Map<String, String>();
