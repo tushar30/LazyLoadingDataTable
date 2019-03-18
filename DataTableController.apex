@@ -18,7 +18,7 @@ public class DataTableController {
             for(String fieldName :  fieldNameSet){
                 if(fieldMap.containsKey(fieldName)) {
                     fieldSet.add(fieldName);
-                    labelList.add(new LabelDescriptionWrapper(fieldMap.get(fieldName).getDescribe().getLabel(), fieldName, fieldMap.get(fieldName).getDescribe().getType().name(), true ));
+                    labelList.add(new LabelDescriptionWrapper(fieldMap.get(fieldName).getDescribe().getLabel(), fieldName, fieldMap.get(fieldName).getDescribe().getType().name().toLowerCase(), true ));
                 }
             }
             
